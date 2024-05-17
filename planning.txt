@@ -1,0 +1,47 @@
+voting application
+
+WHAT ???
+
+
+1. MODALS ? 
+2. ROUTES ?
+
+
+VOTING APP FUNCTIONALITY :-
+
+   1. user sign in  / sign up 
+   2. see the list of candidates
+   3. vote ome of the candidate after 4. voting, user can't vote again
+   5. user data must contain their unique govt id proof named : aadhar card number rmdir /s /q .git
+   6. there should be one admin who can only maintain the table of candidates and he can't able to vote at all
+   7. user can change their password 
+   8. user can only login with aadhar card number and password 
+   9. admin can't vote at all
+
+
+
+---------------------------------------------------
+
+
+Routes
+
+USER AUTHENTICATION:
+    /signup: POST - Create a new user account.
+    /login: POST - Log in to an existing account. [ aadhar card number + password ]
+
+VOTING:
+    /candidates: GET - Get the list of candidates.
+    /vote/:candidateId: POST - Vote for a specific candidate.
+
+VOTE COUNTS:
+    /vote/counts: GET - Get the list of candidates sorted by their vote counts.
+
+USER PROFILE:
+    /profile: GET - Get the user's profile information.
+    /profile/password: PUT - Change the user's password.
+
+ADMIN CANDIDATE MANAGEMENT:
+    /candidates: POST - Create a new candidate.
+    /candidates/:candidateId: PUT - Update an existing candidate.
+    /candidates/:candidateId: DELETE - Delete a candidate from the list.
+
